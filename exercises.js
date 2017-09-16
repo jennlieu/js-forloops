@@ -8,7 +8,14 @@ Write a for-loop that will iterate through 20 numbers (starting at 1 and ending 
 .
 "Now serving 20."
 */
+// var numbers = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"]
+function looper(num){
+	for (var i =0; i <= num; i++){
+		console.log ("Now serving " + i);
+	}
+}
 
+looper(20);
 
 /* 2) Pop Charts
 Write a for-loop that will iterate through the topFive array below and console.log the following message:
@@ -20,7 +27,12 @@ This week's chart buster is: '24K Magic.'
 */
 
 var topFive = ["Closer", "Starboy", "I Feel It Coming", "Let Me Love You", "24K Magic"];
-
+function popChart(arr){
+	for(var i=0; i<=arr.length; i++){
+		console.log("This week's chart buster is: " + i);
+	}
+}
+popChart(topFive);
 
 /* 3) Dead Presidents
 Declare a variable named `presidents` and assign it to an array containing the following Presidents: Washington, Adams, Jefferson, Madison and Monroe.
@@ -41,30 +53,54 @@ This function will iterate through the person parameter and console.log the foll
 
 "President person was a great leader."
 */
-
-
+var presidents = ["Washington","Adams", "Jefferson","Madison","Monroe"];
+function deadPres(arr){
+	for (var i=0; i<arr.length; i++){
+		console.log (presidents);
+	}
+}
+deadPres(presidents);
+function leaders (person){
+	for (var i=0; i<person.length; i++){
+		console.log ("President person was a great leader " + person[i]);
+	}
+}
+leaders(presidents);
 /* 4) Line Number
 Declare a variable named `stringOfNumbers` and assign its value to an empty string. 
 
 Write a for-loop that concatenates a Number value into that string on each iteration, starting at `10` and continuing up to and including `20`. Console.log your result. It should read "1011121314151617181920"*/
-
-
+var stringOfNumbers = "";
+for (var i=10; i<21; i++){
+	stringOfNumbers +=i;
+}
+console.log (stringOfNumbers);
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
 
 Write a for-loop that will push even numbers to the `evenNumArr` array. We want to push 50 even even numbers starting from 0.
 Console.log your results.
 */
-
-
+var evenNumArr = [];
+	for (var i=0; i<100; i++){
+if (i%2 === 0){
+	evenNumArr.push (i);
+}
+}
+console.log(evenNumArr);
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
 
 Write a for-loop that will sum up odd numbers to the `oddSum` variable. We want to add 50 odd numbers starting from 1.
 Console.log your results.
 */
-  
-
+var oddSum = 0;
+	for (var i=0; i<100; i++){
+if (i%2 === 1){
+	oddSum +=i;
+}		
+	}
+console.log(oddSum);
 /* 7) Oops There It is
 Declare a variable named `oopsArray` and assign its to the following array: `[ 'turn' , , 'down' , , 'for' , , 'what' ]`.
 Note that every odd index value in `oopsArray` is currently `undefined`. Using a for-loop, add the string `'nope'` to every odd index. Console.log your result. It should look like this:
